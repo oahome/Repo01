@@ -4,6 +4,9 @@ provider "aws" {
 
 resource "aws_s3_bucket" "bucket_vulnerable" {
   bucket = "mi-bucket-de-prueba-xsiam-12345"
+  tags = {
+    yor_trace = "ae7c681d-b415-4c71-830d-db8142efda4c"
+  }
 }
 
 # ERROR 1: Hace el bucket totalmente público en internet
